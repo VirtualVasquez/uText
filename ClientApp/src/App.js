@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import { Login } from './pages/login/login.js';
-import { Chat } from './pages/chat/chat.js';
+import { LoginPage } from './pages/loginPage/loginPage.js';
+import { ChatPage } from './pages/chatPage/chatPage.js';
 
 
 export default class App extends Component {
 
   render () {
     return (
-      <Login />
+      <LoginPage />
     );
   }
 }
