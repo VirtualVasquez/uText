@@ -1,0 +1,36 @@
+#logout-column{
+    display: inline-flex;
+    flex-direction: row-reverse;
+    
+}
+
+#jumbotron-headers > div{
+    border-width: 1px 1px 0px 1px;
+    border-style: solid;
+    border-color: black;
+}
+#jumbotron-content > div{
+    height: 80vh;
+    border-width: 0px 1px 1px 1px;
+    border-style: solid;
+    border-color: black;}
+
+#chat-log{
+    display: inline-block;
+    flex-direction: column-reverse;
+}
+
+#message-form{
+    display: inline-block;
+}
+
+#chat-jumbotron-center-column{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+#chat-history > div{
+    display: flexbox;
+    background-color: white;
+}
