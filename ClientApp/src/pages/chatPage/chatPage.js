@@ -18,21 +18,18 @@ export class ChatPage extends Component {
         <div className="jumbotron" id="chat-jumbotron">
 
             <div className="row" id="jumbotron-headers">
-                <div className="col-lg-2">
+                <div className="col-md-3">
                     <h3 className="text-center">Channels</h3>
                 </div>
-                <div className="col-lg-8">
+                <div className="col-md-9">
                     <h2 className="text-center">CHANNEL NAME</h2>
-                </div>
-                <div className="col-lg-2">
-                    <h3 className="text-center">Active</h3>
                 </div>
             </div>
             <div className="row" id="jumbotron-content">
-                <div className="col-lg-2">
+                <div className="col-md-3">
                     <button className="btn">Channel Name 1</button>
                 </div>
-                <div className="col-lg-8" id="chat-jumbotron-center-column">
+                <div className="col-md-9" id="chat-jumbotron-center-column">
 
 
                     <div className="container" id="chat-container">
@@ -50,14 +47,11 @@ export class ChatPage extends Component {
                         </div>
                         
                         <form className="row" id="chat-form">
-                            <input type="message" className="form-control col-lg-10" placeholder="Write your message here"></input>
-                            <button type="submit" class="btn btn-primary col-lg-2">Send</button>
+                            <input type="message" className="form-control col-md-10" placeholder="Write your message here"></input>
+                            <button type="submit" class="btn btn-primary col-md-2">Send</button>
                         </form>
 
                     </div>
-                </div>
-                <div className="col-lg-2">
-                    <button className="btn">User1</button>
                 </div>
             </div>
         </div>
