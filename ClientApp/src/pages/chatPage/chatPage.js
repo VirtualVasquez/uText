@@ -8,11 +8,16 @@ import { TextInput } from '../../components/TextInput';
 
 
 export class ChatPage extends Component {
+  constructor(props){
+      super(props);
+      this.state = {
+          textMessages:[]
+      };
+  }
 
   render () {
     return (
       <div className="container">
-
         <Nav />
         <div className="jumbotron" id="chat-jumbotron">
 
@@ -36,8 +41,7 @@ export class ChatPage extends Component {
                             <TextBubble />
                         </div>
                         
-                        <TextInput />
-
+                        <TextInput/>
                     </div>
                 </div>
             </div>
