@@ -1,5 +1,11 @@
 import React, { Component } from 'react';
 import './chatPage.css';
+import { TextBubble } from '../../components/TextBubble';
+import { ChannelName } from '../../components/ChannelName';
+import { Nav } from '../../components/Nav';
+import { TextInput } from '../../components/TextInput';
+
+
 
 export class ChatPage extends Component {
 
@@ -7,14 +13,7 @@ export class ChatPage extends Component {
     return (
       <div className="container">
 
-        <div className="row">
-            <div class="col-6">
-                <h1>uText</h1>
-            </div>
-            <div class="col-6" id="logout-column">
-                <button className="btn btn-danger">Logout</button>
-            </div>
-        </div>
+        <Nav />
         <div className="jumbotron" id="chat-jumbotron">
 
             <div className="row" id="jumbotron-headers">
@@ -26,30 +25,18 @@ export class ChatPage extends Component {
                 </div>
             </div>
             <div className="row" id="jumbotron-content">
+                
                 <div className="col-md-3">
-                    <button className="btn">Channel Name 1</button>
+                    <ChannelName/>
                 </div>
                 <div className="col-md-9" id="chat-jumbotron-center-column">
-
-
                     <div className="container" id="chat-container">
 
                         <div id="chat-history">
-                            <div className="author-and-text">
-                                <h6>Author</h6>
-                                <p>text</p>
-                            </div>
-                            <div className="author-and-text">
-                                <h6>Author</h6>
-                                <p>text</p>
-                            </div>
-
+                            <TextBubble />
                         </div>
                         
-                        <form className="row" id="chat-form">
-                            <input type="message" className="form-control col-md-10" placeholder="Write your message here"></input>
-                            <button type="submit" class="btn btn-primary col-md-2">Send</button>
-                        </form>
+                        <TextInput />
 
                     </div>
                 </div>
