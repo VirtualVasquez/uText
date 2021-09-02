@@ -1,13 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-export class TextBubble extends Component {
-
-    render () {
-        return (
-            <div className="TextBubble">
-                <h6>Author</h6>
-                <p>text</p>
-            </div>
-        );
-        }
+const TextBubble = props => {
+    return (
+        <div className="TextBubble">
+            <h6>Author</h6>
+            <p>{props.message}</p>
+        </div>
+    );
 }
+
+export default TextBubble;

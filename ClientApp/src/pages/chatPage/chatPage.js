@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import './chatPage.css';
-import { TextBubble } from '../../components/TextBubble';
+import TextBubble from '../../components/TextBubble';
 import { ChannelName } from '../../components/ChannelName';
 import { Nav } from '../../components/Nav';
-import { TextInput } from '../../components/TextInput';
+import TextInput from '../../components/TextInput';
 
 
 
@@ -11,8 +11,38 @@ export class ChatPage extends Component {
   constructor(props){
       super(props);
       this.state = {
+          userMessage:"",
           textMessages:[]
       };
+      this.handleChange = this.handleChange.bind(this);
+      this.pushMessage = this.pushMessage.bind(this);
+
+  }
+
+  handleChange(event){
+      this.setState({
+          userMessage: event.target.value
+      })
+  }
+
+  pushMessage(){
+      if(this.state.userMessage){
+         this.setState({
+             textMessages:
+             [...this.state.textMessages, 
+                this.state.userMessage]
+        })
+      }
+      this.setState({userMessage:""})
+  }
+  
+  renderMessages(){
+      return this.state.textMessages.map((item) => (
+          <TextBubble
+            key={item.id}
+            message={item}
+          />
+      ))
   }
 
   render () {
@@ -38,10 +68,13 @@ export class ChatPage extends Component {
                     <div className="container" id="chat-container">
 
                         <div id="chat-history">
-                            <TextBubble />
+                            {this.renderMessages()}
                         </div>
                         
-                        <TextInput/>
+                        <TextInput
+                            handleChange={this.handleChange}
+                            pushMessage={this.pushMessage}
+                        />
                     </div>
                 </div>
             </div>
