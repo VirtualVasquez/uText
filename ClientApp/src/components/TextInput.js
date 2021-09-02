@@ -8,6 +8,7 @@ const TextInput = props => {
                     type="message" 
                     className="form-control col-md-10" 
                     placeholder="Write your message here"
+                    value={props.value}
                     onChange={props.handleChange}
                     ></input>
                 <button 

@@ -72,6 +72,7 @@ export class ChatPage extends Component {
                         </div>
                         
                         <TextInput
+                            value={this.state.userMessage}
                             handleChange={this.handleChange}
                             pushMessage={this.pushMessage}
                         />
