@@ -59,7 +59,23 @@ export class ChatPage extends Component {
             </div>
 
             <div className="row" id="jumbotron-row">
-                <div className="jumbotron">
+                <div 
+                    className="col-md-2 jumbo-cols" id="channels-col"
+                >
+                    <p>hello</p>
+                    <p>hello</p>
+                    <p>hello</p>
+                </div>
+                <div 
+                    className="col-md-8 jumbo-cols"
+                    id="texts-col"
+                >
+                    <p>hello</p>
+                </div>
+                <div
+                    className="col-md-2 jumbo-cols"
+                    id="users-col"   
+                >
                     <p>hello</p>
                 </div>
             </div>

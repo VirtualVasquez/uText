@@ -1,20 +1,29 @@
+#chat-page-container{
+    background-color: blue;
+    height: 100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#nav-row{
+    position:static;
+}
+
 #logout-column{
     display: inline-flex;
     flex-direction: row-reverse;
-    
 }
 
 #jumbotron-row{
     background-color: yellow;
-    bottom: 0;
+    height: 100vh;
 }
 
-#chat-page-container{
- background-color: blue;
- height: 100vh;
- display:flex;
- flex-direction: column;
- justify-content: space-between;
+
+.jumbo-cols{
+    border-width: 1px 1px 1px 1px;
+    border-style: solid;
+    border-color: black;
 }
 
 
