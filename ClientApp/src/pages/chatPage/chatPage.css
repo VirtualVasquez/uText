@@ -4,13 +4,27 @@
     
 }
 
+#jumbotron-row{
+    background-color: yellow;
+    bottom: 0;
+}
+
+#chat-page-container{
+ background-color: blue;
+ height: 100vh;
+ display:flex;
+ flex-direction: column;
+ justify-content: space-between;
+}
+
+
 #jumbotron-headers > div{
     border-width: 1px 1px 0px 1px;
     border-style: solid;
     border-color: black;
 }
 #jumbotron-content > div{
-    height: 80vh;
+    /* height: 80vh; */
     border-width: 0px 1px 1px 1px;
     border-style: solid;
     border-color: black;}
