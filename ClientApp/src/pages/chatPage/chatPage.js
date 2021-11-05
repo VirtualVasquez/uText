@@ -62,6 +62,7 @@ export class ChatPage extends Component {
                 <div 
                     className="col-md-2 jumbo-cols" id="channels-col"
                 >
+                    <h2 className="text-center">Channels</h2>
                     <p>hello</p>
                     <p>hello</p>
                     <p>hello</p>
@@ -70,29 +71,27 @@ export class ChatPage extends Component {
                     className="col-md-8 jumbo-cols"
                     id="texts-col"
                 >
-                    <p>hello</p>
+                    <h2 className="text-center">
+                        CHANNEL NAME
+                    </h2>
+                    <div id="channel-history">
+                        <p>Dummy data</p>    
+                    </div>                                 
+                        <form className="row" id="chat-form">
+                                <input type="message" className="form-control col-md-10" placeholder="Write your message here"></input>
+                                <button type="submit" class="btn btn-primary col-md-2">Send</button>
+                        </form>                    
                 </div>
                 <div
                     className="col-md-2 jumbo-cols"
                     id="users-col"   
                 >
+                    <h2 className="text-center">Active</h2>
                     <p>hello</p>
                 </div>
             </div>
 
             {/* <div className="jumbotron" id="chat-jumbotron">
-
-                <div className="row" id="jumbotron-headers">
-                    <div className="col-md-2">
-                        <p className="text-center">Channels</p>
-                    </div>
-                    <div className="col-md-8">
-                        <h2 className="text-center">CHANNEL NAME</h2>
-                    </div>
-                    <div className="col-md-2">
-                        <h3 className="text-center">Active</h3>
-                    </div>
-                </div>
                 <div className="row" id="jumbotron-content">
                     <div className="col-md-2">
                         <button className="btn">Channel Name 1</button>
