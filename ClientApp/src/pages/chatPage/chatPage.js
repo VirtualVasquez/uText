@@ -46,6 +46,7 @@ export class ChatPage extends Component {
   }
 
   render () {
+
     return (
         <div className="container" id="chat-page-container">
 
@@ -67,64 +68,24 @@ export class ChatPage extends Component {
                     <p>hello</p>
                     <p>hello</p>
                 </div>
-                <div 
-                    className="col-md-8 jumbo-cols"
-                    id="texts-col"
-                >
+                <div className="col-md-8 jumbo-cols" id="texts-col">
                     <h2 className="text-center">
                         CHANNEL NAME
                     </h2>
                     <div id="channel-history">
-                        <p>Dummy data</p>    
-                    </div>                                 
-                        <form className="row" id="chat-form">
-                                <input type="message" className="form-control col-md-10" placeholder="Write your message here"></input>
-                                <button type="submit" class="btn btn-primary col-md-2">Send</button>
-                        </form>                    
+                        {this.renderMessages()}
+                    </div>
+                    <TextInput
+                        handleChange={this.handleChange}
+                        pushMessage={this.pushMessage}
+                        userMessage={this.state.userMessage}
+                    />                                                 
                 </div>
-                <div
-                    className="col-md-2 jumbo-cols"
-                    id="users-col"   
-                >
+                <div className="col-md-2 jumbo-cols" id="users-col">
                     <h2 className="text-center">Active</h2>
                     <p>hello</p>
                 </div>
             </div>
-
-            {/* <div className="jumbotron" id="chat-jumbotron">
-                <div className="row" id="jumbotron-content">
-                    <div className="col-md-2">
-                        <button className="btn">Channel Name 1</button>
-                    </div>
-                    <div className="col-md-8" id="chat-jumbotron-center-column">
-
-
-                        <div className="container" id="chat-container">
-
-                            <div id="chat-history">
-                                <div className="author-and-text">
-                                    <h6>Author</h6>
-                                    <p>text</p>
-                                </div>
-                                <div className="author-and-text">
-                                    <h6>Author</h6>
-                                    <p>text</p>
-                                </div>
-
-                            </div>
-                            
-                            <form className="row" id="chat-form">
-                                <input type="message" className="form-control col-md-10" placeholder="Write your message here"></input>
-                                <button type="submit" class="btn btn-primary col-md-2">Send</button>
-                            </form>
-
-                        </div>
-                    </div>
-                    <div className="col-md-2">
-                        <button className="btn">User1</button>
-                    </div>
-                </div>
-            </div> */}
       </div>
     );
   }

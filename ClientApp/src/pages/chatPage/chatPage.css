@@ -17,6 +17,7 @@
 #jumbotron-row{
     background-color: yellow;
     height: 100vh;
+    padding-bottom: 1vh;
 }
 
 .jumbo-cols{
@@ -31,7 +32,7 @@
     justify-content: space-between;
 }
 #channel-history{
-    background-color: red;
+    /* background-color: red; */
     height: 100%;
     overflow-y:auto;
 }
