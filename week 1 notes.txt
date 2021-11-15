@@ -33,4 +33,3 @@ Expected functionality:
 
 App is using a front-end framework (react)
 
-Create progress post in the facebook community
