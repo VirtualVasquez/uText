@@ -3,7 +3,7 @@ import React from 'react';
     const TextInput = props => {
 
     return (
-        <div className="row" id="chat-form">
+        <div className="row" id="text-form">
                 <input 
                     type="message" 
                     className="form-control col-md-10" 
