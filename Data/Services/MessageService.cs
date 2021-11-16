@@ -22,10 +22,8 @@ namespace Messages.Data
 
 
         // Get all users
-        public List<User> GetAllUsers()
-        {
-            throw new System.NotImplementedException();
-        }
+        public List<User> GetAllUsers() => Data.Users.ToList();
+
         //EXTRA: get a single Message by ID
         public Message GetTextById(int MessageId)
         {

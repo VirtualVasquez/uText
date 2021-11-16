@@ -20,5 +20,34 @@ namespace Messages.Data
                 Username="George"
             }
         };
+        public static List<User> Users => allUsers;
+        static List<User> allUsers = new List<User>()
+        {
+            new User()
+            {
+                Id=1,
+                Username="Jerry"
+            },
+            new User()
+            {
+                Id=2,
+                Username="George"
+            },
+            new User()
+            {
+                Id=3,
+                Username="Kramer"
+            },
+            new User()
+            {
+                Id=4,
+                Username="Elaine"
+            },
+            new User()
+            {
+                Id=5,
+                Username="Newman"
+            }
+        };
     }
 }
