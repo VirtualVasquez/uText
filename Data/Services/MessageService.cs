@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Messages.Data
 {
@@ -14,11 +15,12 @@ namespace Messages.Data
         {
             throw new System.NotImplementedException();
         }
+
+
         // Get all Messages
-        public List<Message> GetAllMessages()
-        {
-            throw new System.NotImplementedException();
-        }
+        public List<Message> GetAllMessages() => Data.Messages.ToList();
+
+
         // Get all users
         public List<User> GetAllUsers()
         {

@@ -12,6 +12,13 @@ namespace Messages.Controllers
             this._service = service;
         }
 
+        [HttpGet("[action]")]
+        public IActionResult GetMessages()
+        {
+            var allMessages = _service.GetAllMessages();
+            return Ok(allMessages);
+        }
+
         [HttpPost("AddMessage")]
         public IActionResult AddMessage([FromBody]Message message)
         {
