@@ -1,0 +1,29 @@
+Due by week 3
+Get the server up and running
+--serving up index.html file
+--STOP using the npm run starts commands
+--FIGURE OUT
+----how to have your server "serve" the poroper files to the browser
+----it all starts with serving up the index.html
+
+
+API endpoints are set up
+--serving up "dummy data" here instead
+ENDPOINTS
+--Get all messages
+----GET:"api/messages"
+--create a chat message
+----POST:"api/messages"
+--get all users
+----GET:"api/users"
+--create a user
+----POST:"api/users"
+--get a single user
+----GET:"api/users/{id}"
+
+Front-end/client is using data from API endpoints
+
+How to get started
+install postman
+create api endpoints on your server (node/c#/python, etc.)
+test each endpoint individually using postman
