@@ -6,8 +6,8 @@ namespace Messages.Data
     {
         // Get all Messages
         List<Message> GetAllMessages();
-        // Create a chat Message
-        void AddMessage(Message message);
+        // // Create a chat Message
+        // void AddMessage(Message message);
         
         // Get all users
         List<User> GetAllUsers();
@@ -17,6 +17,6 @@ namespace Messages.Data
         User GetUserById(int userId); 
         
         //EXTRA: get a single Message by ID
-        Message GetTextById(int MessageId);
+        // Message GetTextById(int MessageId);
     } 
 }

@@ -12,21 +12,27 @@ namespace Messages.Controllers
             this._service = service;
         }
 
-        [HttpGet("[action]")]
+        [HttpGet("GetMessages")]
         public IActionResult GetMessages()
         {
             var allMessages = _service.GetAllMessages();
             return Ok(allMessages);
         }
-
-        [HttpPost("AddMessage")]
-        public IActionResult AddMessage([FromBody]Message message)
+        [HttpGet("GetUsers")]
+        public IActionResult GetUsers()
         {
-            if(message != null)
-            {
-                _service.AddMessage(message);
-            }
-            return Ok();
-        } 
+            var allMessages = _service.GetAllUsers();
+            return Ok(allMessages);
+        }
+
+        // [HttpPost("AddMessage")]
+        // public IActionResult AddMessage([FromBody]Message message)
+        // {
+        //     if(message != null)
+        //     {
+        //         _service.AddMessage(message);
+        //     }
+        //     return Ok();
+        // } 
     }
 }
