@@ -12,18 +12,33 @@ namespace Messages.Controllers
             this._service = service;
         }
 
+        // Get all Messages
         [HttpGet("GetMessages")]
         public IActionResult GetMessages()
         {
             var allMessages = _service.GetAllMessages();
             return Ok(allMessages);
         }
+        
+        // Get all Users
         [HttpGet("GetUsers")]
         public IActionResult GetUsers()
         {
-            var allMessages = _service.GetAllUsers();
-            return Ok(allMessages);
+            var allUsers = _service.GetAllUsers();
+            return Ok(allUsers);
         }
+
+        // get a single user
+        [HttpGet("GetUserById/{userId}")]
+        public IActionResult GetUserById(string userId)
+        {
+            var oneUser= _service.GetUserById(userId);
+            return Ok(oneUser);
+        }
+        // create a user
+        // Create a chat Message
+
+
 
         // [HttpPost("AddMessage")]
         // public IActionResult AddMessage([FromBody]Message message)

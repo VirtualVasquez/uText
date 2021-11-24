@@ -9,13 +9,13 @@ namespace Messages.Data
         {
             new Message()
             {
-                Id=1,
+                Id="1",
                 Text="Hello there",
                 Username="Jerry"
             },
             new Message()
             {
-                Id=2,
+                Id="2",
                 Text="Hello to you too",
                 Username="George"
             }
@@ -25,27 +25,27 @@ namespace Messages.Data
         {
             new User()
             {
-                Id=1,
+                Id="ab",
                 Username="Jerry"
             },
             new User()
             {
-                Id=2,
+                Id="2",
                 Username="George"
             },
             new User()
             {
-                Id=3,
+                Id="3",
                 Username="Kramer"
             },
             new User()
             {
-                Id=4,
+                Id="4",
                 Username="Elaine"
             },
             new User()
             {
-                Id=5,
+                Id="5",
                 Username="Newman"
             }
         };
