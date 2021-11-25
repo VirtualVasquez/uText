@@ -21,14 +21,8 @@ namespace Messages.Data
         // create a user
         public void AddUser(User user)
         {
-            throw new System.NotImplementedException();
+            Data.Users.Add(user);
         }
-
-        //EXTRA: get a single Message by ID
-        // public Message GetTextById(int MessageId)
-        // {
-        //     throw new System.NotImplementedException();
-        // }
         // get a single user
     }
 }

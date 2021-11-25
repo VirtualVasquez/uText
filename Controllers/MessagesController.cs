@@ -35,19 +35,26 @@ namespace Messages.Controllers
             var oneUser= _service.GetUserById(userId);
             return Ok(oneUser);
         }
-        // create a user
         // Create a chat Message
+        [HttpPost("AddMessage")]
+        public IActionResult AddMessage([FromBody]Message message)
+        {
+            if(message != null)
+            {
+                _service.AddMessage(message);
+            }
+            return Ok();
+        }
 
-
-
-        // [HttpPost("AddMessage")]
-        // public IActionResult AddMessage([FromBody]Message message)
-        // {
-        //     if(message != null)
-        //     {
-        //         _service.AddMessage(message);
-        //     }
-        //     return Ok();
-        // } 
+        // create a user
+        [HttpPost("AddUser")]
+        public IActionResult AddUser([FromBody]User user)
+        {
+            if(user != null)
+            {
+                _service.AddUser(user);
+            }
+            return Ok();
+        } 
     }
 }
