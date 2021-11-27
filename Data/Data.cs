@@ -11,13 +11,13 @@ namespace Messages.Data
             {
                 Id="1",
                 Text="Hello there",
-                Username="Jerry"
+                UserId="A"
             },
             new Message()
             {
                 Id="2",
                 Text="Hello to you too",
-                Username="George"
+                UserId="B"
             }
         };
         public static List<User> Users => allUsers;
@@ -25,27 +25,27 @@ namespace Messages.Data
         {
             new User()
             {
-                Id="ab",
+                Id="A",
                 Username="Jerry"
             },
             new User()
             {
-                Id="2",
+                Id="B",
                 Username="George"
             },
             new User()
             {
-                Id="3",
+                Id="C",
                 Username="Kramer"
             },
             new User()
             {
-                Id="4",
+                Id="D",
                 Username="Elaine"
             },
             new User()
             {
-                Id="5",
+                Id="E",
                 Username="Newman"
             }
         };
