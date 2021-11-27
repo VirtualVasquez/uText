@@ -3,7 +3,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Messages.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/")]
+    // [Route("api/[controller]")]
     public class MessagesController: Controller
     {
         private IMessageService _service;
@@ -13,7 +14,7 @@ namespace Messages.Controllers
         }
 
         // Get all Messages
-        [HttpGet("GetMessages")]
+        [HttpGet("Messages/GetMessages")]
         public IActionResult GetMessages()
         {
             var allMessages = _service.GetAllMessages();
@@ -21,7 +22,7 @@ namespace Messages.Controllers
         }
         
         // Get all Users
-        [HttpGet("GetUsers")]
+        [HttpGet("Users/GetUsers")]
         public IActionResult GetUsers()
         {
             var allUsers = _service.GetAllUsers();
@@ -29,14 +30,14 @@ namespace Messages.Controllers
         }
 
         // get a single user
-        [HttpGet("GetUserById/{userId}")]
+        [HttpGet("Users/GetUserById/{userId}")]
         public IActionResult GetUserById(string userId)
         {
             var oneUser= _service.GetUserById(userId);
             return Ok(oneUser);
         }
         // Create a chat Message
-        [HttpPost("AddMessage")]
+        [HttpPost("Messages/AddMessage")]
         public IActionResult AddMessage([FromBody]Message message)
         {
             if(message != null)
@@ -47,7 +48,7 @@ namespace Messages.Controllers
         }
 
         // create a user
-        [HttpPost("AddUser")]
+        [HttpPost("Users/AddUser")]
         public IActionResult AddUser([FromBody]User user)
         {
             if(user != null)
