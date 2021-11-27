@@ -37,13 +37,20 @@ export class ChatPage extends Component {
   }
 
   pushMessage(){
-      if(this.state.userMessage){
-         this.setState({
-             textMessages:
-             [...this.state.textMessages, 
-                this.state.userMessage]
+
+    if(this.state.userMessage){
+        axios.post('api/Messages/addMessage',{
+            text: this.state.userMessage,
+            username: "author"
         })
-      }
+        .then(function (response){
+            console.log(response);
+        })
+        .catch(function(error){
+            console.log(error)
+        })
+    }
+
       this.setState({userMessage:""})
   }
   
@@ -58,6 +65,9 @@ export class ChatPage extends Component {
   }
 
   componentDidMount(){
+      this.retrieveMessages();
+  }
+  componentDidUpdate(){
       this.retrieveMessages();
   }
 
