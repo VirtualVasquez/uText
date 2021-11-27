@@ -38,3 +38,9 @@
     padding: 10px;
 }
 
+.textBubble{
+    border-width: 1px 1px 1px 1px;
+    border-style: solid;
+    border-color: black;
+    padding: 1% 2% 0 2%;
+}

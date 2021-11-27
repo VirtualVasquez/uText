@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import './chatPage.css';
 import TextBubble from '../../components/TextBubble';
 import { ChannelName } from '../../components/ChannelName';
@@ -25,6 +26,16 @@ export class ChatPage extends Component {
       })
   }
 
+  retrieveMessages(){
+    axios.get('api/Messages/GetMessages').then(result => {
+        const response = result.data;
+        this.setState({
+            textMessages: response
+        })
+        console.log(this.state.textMessages);
+    })
+  }
+
   pushMessage(){
       if(this.state.userMessage){
          this.setState({
@@ -40,9 +51,14 @@ export class ChatPage extends Component {
       return this.state.textMessages.map((item) => (
           <TextBubble
             key={item.id}
-            message={item}
+            username={item.username}
+            text={item.text}
           />
       ))
+  }
+
+  componentDidMount(){
+      this.retrieveMessages();
   }
 
   render () {
